@@ -18,13 +18,19 @@ WordPress plugin that features any post type by using a simple shortcode.
 ##Examples
 
 Feature latest post from all posts: 
-```[codeflavors_featured_post]```
+```
+[codeflavors_featured_post]
+```
 
 Feature latest post from a given post type **post** category that has ID 3: 
-```[codeflavors_featured_post category="3"]```
+```
+[codeflavors_featured_post category="3"]
+```
 
 Feature latest post for a custom post type **video** having taxonomy **video-cat** and term ID 2 : 
-```[codeflavors_featured_post post_type="video" taxonomy="video-cat" category="2"]```
+```
+[codeflavors_featured_post post_type="video" taxonomy="video-cat" category="2"]
+```
 
 ##Basic HTML structure
 
@@ -118,6 +124,6 @@ Last step is to add the CSS styling into your WordPress theme *style.css* or whe
 
 In order to use this newly created theme with the shortcode, you should specify the template like this:
 
-***
+```
 [codeflavors_featured_post template="my-template-name"]
-***
+```
