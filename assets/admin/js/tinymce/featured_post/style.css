@@ -1,0 +1,20 @@
+/**
+ * TinyMCE shortcode output for visual editor.
+ */
+.codeflavors_fp.cffp{
+	height:50px; 
+	width:99%; 
+	background:url(ico.png) center center no-repeat #EEEEEE;
+	border:1px #999999 solid;
+	cursor:pointer;
+}
+
+.codeflavors_fp:before{
+	content: "\f181";
+	font-family:'dashicons';
+	font-size:20px;
+}
+
+.codeflavors_fp.wp-slider-selected{
+	background-color:#d8d8d8;
+}
