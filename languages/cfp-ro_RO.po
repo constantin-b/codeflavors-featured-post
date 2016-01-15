@@ -1,11 +1,11 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: CodeFlavors Featured Post\n"
 "POT-Creation-Date: 2016-01-15 10:53+0200\n"
-"PO-Revision-Date: 2016-01-15 10:54+0200\n"
+"PO-Revision-Date: 2016-01-15 11:20+0200\n"
 "Last-Translator: Constantin Boiangiu <constantin.b@gmail.com>\n"
 "Language-Team: \n"
-"Language: en\n"
+"Language: ro_RO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,192 +18,206 @@ msgstr ""
 #: ../assets/admin/js/tinymce/featured_post/langs/langs.php:11
 #: ../assets/admin/js/tinymce/featured_post/langs/langs.php:13
 msgid "Insert new featured post"
-msgstr ""
+msgstr "Adaugă articol reprezentativ nou"
 
 #: ../assets/admin/js/tinymce/featured_post/langs/langs.php:14
 msgid "Edit featured post properties"
-msgstr ""
+msgstr "Editați proprietățile articolului reprezentativ"
 
 #: ../assets/admin/js/tinymce/featured_post/langs/langs.php:16
 msgid "Category/Term (optional)"
-msgstr ""
+msgstr "Categorie/Termen (opțional)"
 
 #: ../assets/admin/js/tinymce/featured_post/langs/langs.php:17
 msgid "Taxonomy name (optional)"
-msgstr ""
+msgstr "Denumire taxonomie (opțional)"
 
 #: ../assets/admin/js/tinymce/featured_post/langs/langs.php:18
 #: ../includes/compatibility.php:31
 #: ../includes/libs/class-cfp-featured-post-widget.php:82
 msgid "Post type"
-msgstr ""
+msgstr "Tip articol"
 
 #: ../assets/admin/js/tinymce/featured_post/langs/langs.php:19
 msgid "Post ID (if set, will override all other options)"
-msgstr ""
+msgstr "ID Articol (când este introdus, restul opțiunilor vor fi ignorate)"
 
 #: ../assets/admin/js/tinymce/featured_post/langs/langs.php:20
 #: ../includes/compatibility.php:57
 #: ../includes/libs/class-cfp-featured-post-widget.php:116
 msgid "Number of posts"
-msgstr ""
+msgstr "Număr articole"
 
 #: ../assets/admin/js/tinymce/featured_post/langs/langs.php:21
 #: ../includes/compatibility.php:66
 msgid "Post offset"
-msgstr ""
+msgstr "Primul articol"
 
 #: ../assets/admin/js/tinymce/featured_post/langs/langs.php:22
 #: ../includes/compatibility.php:83
 #: ../includes/libs/class-cfp-featured-post-widget.php:128
 msgid "Template"
-msgstr ""
+msgstr "Șablon"
 
 #: ../assets/admin/js/tinymce/featured_post/langs/langs.php:25
 msgid "Close"
-msgstr ""
+msgstr "Închide"
 
 #: ../assets/admin/js/tinymce/featured_post/langs/langs.php:46
 msgid "No taxonomy"
-msgstr ""
+msgstr "Fără taxonomie"
 
 #: ../includes/admin/functions.php:132
 msgid "No options"
-msgstr ""
+msgstr "Fără opțiuni"
 
 #: ../includes/admin/functions.php:133
 msgid "Choose"
-msgstr ""
+msgstr "Alegeți"
 
 #: ../includes/admin/libs/class-cfp-admin.php:46
 #: ../includes/compatibility.php:19
 #: ../includes/libs/class-cfp-featured-post-widget.php:32
 #: ../views/plugin_options.template.php:2
 msgid "CodeFlavors Featured Post"
-msgstr ""
+msgstr "Articol Reprezentativ - CodeFlavors"
 
 #: ../includes/admin/libs/class-cfp-admin.php:47
 msgid "Featured Post by CodeFlavors"
-msgstr ""
+msgstr "Articol reprezentativ creat de CodeFlavors"
 
 #: ../includes/compatibility.php:20
 msgid "Feature any post type."
-msgstr ""
+msgstr "Publicați orice tip de articol."
 
 #: ../includes/compatibility.php:24
 msgid "Content"
-msgstr ""
+msgstr "Conținut"
 
 #: ../includes/compatibility.php:40
 msgid "Taxonomy name"
-msgstr ""
+msgstr "Nume taxonomie"
 
 #: ../includes/compatibility.php:49
 #: ../includes/libs/class-cfp-featured-post-widget.php:112
 msgid "Category/Term"
-msgstr ""
+msgstr "Categorie/Termen"
 
 #: ../includes/compatibility.php:51
 msgid "Enter category/term name or ID"
-msgstr ""
+msgstr "Introduceți numele categoriei/termenului sau ID-ul acestuia"
 
 #: ../includes/compatibility.php:60
 msgid "Number of posts to retrieve"
-msgstr ""
+msgstr "Numărul de articole prezentate "
 
 #: ../includes/compatibility.php:68
 msgid ""
 "Skip posts (ie. to retrieve starting with the second post, set the offset to "
 "1)"
 msgstr ""
+"Săriți articole (spre exemplu, pentru a extrage articole începând cu al "
+"doilea articol, introduceți valoarea 1)"
 
 #: ../includes/compatibility.php:75
 msgid "Post ID"
-msgstr ""
+msgstr "ID articol"
 
 #: ../includes/compatibility.php:77
 msgid ""
 "When set, will override all other parameters and return the post having this "
 "ID."
 msgstr ""
+"Când este introdusă, această opțiune va anula toți ceilalți parametri și va "
+"returna articolul pentru care ați introdus ID-ul."
 
 #: ../includes/compatibility.php:86
 msgid "Select one of the available templates to display the featured post."
 msgstr ""
+"Selectați unul dintre șabloanele existente pentru a afișa articolul "
+"reprezentativ."
 
 #: ../includes/functions.php:61
 msgid "Fancy"
-msgstr ""
+msgstr "Elegant"
 
 #: ../includes/functions.php:68
 msgid "Default template"
-msgstr ""
+msgstr "Șablon de bază"
 
 #: ../includes/functions.php:223
 #, php-format
 msgid "%s comment"
-msgstr ""
+msgstr "%s comentariu"
 
 #: ../includes/libs/class-cfp-featured-post-widget.php:24
 msgid "Add a CodeFlavors Featured Post widget"
-msgstr ""
+msgstr "Adăugați un articol reprezentativ CodeFlavors"
 
 #: ../includes/libs/class-cfp-featured-post-widget.php:78
 msgid "Widget title"
-msgstr ""
+msgstr "Titlu"
 
 #: ../includes/libs/class-cfp-featured-post-widget.php:97
 msgid "Taxonomy"
-msgstr ""
+msgstr "Taxonomie"
 
 #: ../includes/libs/class-cfp-featured-post-widget.php:106
 msgid "None selected"
-msgstr ""
+msgstr "Nici o selecție"
 
 #: ../includes/libs/class-cfp-featured-post-widget.php:120
 msgid "Posts offset"
-msgstr ""
+msgstr "Primul articol"
 
 #: ../includes/libs/class-cfp-featured-post-widget.php:124
 msgid "Post ID (will override all other options)"
-msgstr ""
+msgstr "ID articol (restul opțiunilor vor fi ignorate)"
 
 #: ../includes/libs/class-cfp-shortcodes.php:40
 msgid "The category/taxonomy ID to retrieve the latest post from."
-msgstr ""
+msgstr "Categoria/Taxonomia din care vor fi extrase articolele reprezentative."
 
 #: ../includes/libs/class-cfp-shortcodes.php:44
 msgid ""
 "The taxonomy name, if retrieving from anything else other than regular "
 "categories."
 msgstr ""
+"Numele taxonomiei dacă se extrag articole din altceva în afară de "
+"categoriile obișnuite."
 
 #: ../includes/libs/class-cfp-shortcodes.php:49
 msgid ""
 "The post type that should be retrieved from the given taxonomy. Not required "
 "when featuring regular posts."
 msgstr ""
+"Tipul de articol care ar trebui extras din taxonomia dată. Nu este necesar "
+"pentru articolele obișnuite."
 
 #: ../includes/libs/class-cfp-shortcodes.php:53
 msgid "The number of posts to retrieve."
-msgstr ""
+msgstr "Numărul de articole ce vor fi extrase."
 
 #: ../includes/libs/class-cfp-shortcodes.php:57
 msgid ""
 "First row to return (ie. a value of 1 means it will return starting with the "
 "second most recent post)."
 msgstr ""
+"Primul rezultat ce va fi returnat (spre exemplu, o valoare egală cu 1 va "
+"returna rezultatele începând cu al doilea articol)."
 
 #: ../includes/libs/class-cfp-shortcodes.php:61
 msgid ""
 "A post ID. This will retrieve the exact post ID and will override all other "
 "parameters if set."
 msgstr ""
+"Un ID de articol. Aceasta opțiune va extrage exact articolul căruia îi "
+"corespunde ID-ul."
 
 #: ../includes/libs/class-cfp-shortcodes.php:65
 msgid "The featured post template to use when displaying a post."
-msgstr ""
+msgstr "Șablonul ce va fi folosit pentru a afișa articolul reprezentativ."
 
 #: ../views/plugin_options.template.php:13
 msgid "default"
-msgstr ""
+msgstr "Șablon de bază"

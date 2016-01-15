@@ -33,8 +33,8 @@ class CFP_Admin{
 		add_action( 'admin_menu' , array( $this, 'admin_menu' )  );
 		
 		// tinymce
-		//add_action('admin_head', array( $this, 'tinymce' ) );
-		//add_filter('mce_external_languages', array( $this, 'tinymce_languages' ) );
+		add_action('admin_head', array( $this, 'tinymce' ) );
+		add_filter('mce_external_languages', array( $this, 'tinymce_languages' ) );
 	}
 	
 	/**
@@ -44,7 +44,7 @@ class CFP_Admin{
 	public function admin_menu() {
         add_theme_page(
             __( 'CodeFlavors Featured Post', 'cfp' ), 
-            __( 'CodeFlavors Featured Post', 'cfp' ), 
+            __( 'Featured Post by CodeFlavors', 'cfp' ), 
             'edit_posts', 
             'cfp-options',
             array( $this, 'plugin_options' ) );  

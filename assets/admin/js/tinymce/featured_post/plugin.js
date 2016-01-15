@@ -62,11 +62,13 @@
 			
 			if( node ){
 				var code = window.decodeURIComponent( editor.dom.getAttrib( node, 'data-cffp' ) );
-				code.replace( /([a-z\_?]+)\="([^\"]+)/ig, function( a, b, c, d, e ){
-					data[b] = c;
+				code.replace( /([a-z\_?]+)\="([^\"]+)/ig, function( a, b, c, d, e ){					
+					data['cffp_' + b] = c;
 				});
 			}	
-						
+			
+			console.log(data);
+			
 			// Advanced dialog shows general+advanced tabs
 			win = editor.windowManager.open({
 				title: title || editor.getLang('cffp.window_title'),
@@ -78,19 +80,33 @@
 						pack: 'start',
 						items: [
 							{
+								label: editor.getLang('cffp.label_post_type'),
+								name : 'cffp_post_type',
+								type : 'listbox',
+								values: cffp_post_types
+							},
+							{
+								label: editor.getLang('cffp.label_taxonomy'),
+								name : 'cffp_taxonomy',
+								type : 'listbox',
+								values : cffp_taxonomies
+							},
+							{
 								label: editor.getLang('cffp.label_category'),
 								name : 'cffp_category',
 								type : 'textbox'
 							},
 							{
-								label: editor.getLang('cffp.label_taxonomy'),
-								name : 'cffp_taxonomy',
-								type : 'textbox'
+								label : editor.getLang('cffp.label_post_num'),
+								name  : 'cffp_post_num',
+								type  : 'textbox',
+								value : '1'
 							},
 							{
-								label: editor.getLang('cffp.label_post_type'),
-								name : 'cffp_post_type',
-								type : 'textbox'
+								label : editor.getLang('cffp.label_post_offset'),
+								name  : 'cffp_offset',
+								type  : 'textbox',
+								value : '0'
 							},
 							{
 								label: editor.getLang('cffp.label_post_id'),
@@ -100,13 +116,14 @@
 							{
 								label: editor.getLang('cffp.label_template'),
 								name : 'cffp_template',
-								type : 'textbox'
+								type : 'listbox',
+								values : cffp_templates
 							},
 						]
 					}
 				],
 				onSubmit: function(e){
-					var s = '[codeflavors_featured_post category="' + e.data.cffp_category + '" taxonomy="' + e.data.cffp_taxonomy + '" post_type="' + e.data.cffp_post_type + '" post_id="' + e.data.cffp_post_id + '" template="' + e.data.cffp_template + '"]';					
+					var s = '[codeflavors_featured_post post_type="' + e.data.cffp_post_type + '" category="' + e.data.cffp_category + '" taxonomy="' + e.data.cffp_taxonomy + '" post_num="' + e.data.cffp_post_num + '" post_offset="' + e.data.cffp_offset +'" post_id="' + e.data.cffp_post_id + '" template="' + e.data.cffp_template + '"]';					
 					if( node ){ 
 						editor.dom.setAttrib( node, 'data-cffp', window.encodeURIComponent( s ) );
 					}
@@ -121,17 +138,17 @@
 				node 	= event.target;
 			
 			function unselect() {
-				dom.removeClass( dom.select( 'img.wp-slider-selected' ), 'wp-slider-selected' );
+				dom.removeClass( dom.select( 'img.wp-cfp-selected' ), 'wp-cfp-selected' );
 			}
 
 			if ( node.nodeName === 'IMG' && dom.getAttrib( node, 'data-cffp' ) ) {
 				// Don't trigger on right-click
 				if ( event.button !== 2 ) {
-					if ( dom.hasClass( node, 'wp-slider-selected' ) ) {
-						editSlider( node );
+					if ( dom.hasClass( node, 'wp-cfp-selected' ) ) {
+						edit( node );
 					} else {
 						unselect();
-						dom.addClass( node, 'wp-slider-selected' );
+						dom.addClass( node, 'wp-cfp-selected' );
 					}
 				}
 			} else {
