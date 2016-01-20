@@ -1,0 +1,19 @@
+.cfp-page-logo{
+	background-image:url(../images/featured.png)!important;
+	background-position:center 20px!important;
+	padding-top:120px!important;
+	width:150px!important;	
+	background-color:#FFF!important;
+	color:#505050!important;
+}
+
+.about-wrap h1,
+.about-wrap .about-text{
+	margin-right:350px!important;
+}
+
+@media only screen and (max-width: 500px) {
+	.about-wrap h1, .about-wrap .about-text {
+	  margin-right: 0!important;
+	}
+}	

@@ -123,7 +123,7 @@
 					}
 				],
 				onSubmit: function(e){
-					var s = '[codeflavors_featured_post post_type="' + e.data.cffp_post_type + '" category="' + e.data.cffp_category + '" taxonomy="' + e.data.cffp_taxonomy + '" post_num="' + e.data.cffp_post_num + '" post_offset="' + e.data.cffp_offset +'" post_id="' + e.data.cffp_post_id + '" template="' + e.data.cffp_template + '"]';					
+					var s = '[codeflavors_featured_post post_type="' + e.data.cffp_post_type + '" category="' + e.data.cffp_category + '" taxonomy="' + e.data.cffp_taxonomy + '" post_num="' + e.data.cffp_post_num + '" offset="' + e.data.cffp_offset +'" post_id="' + e.data.cffp_post_id + '" template="' + e.data.cffp_template + '"]';					
 					if( node ){ 
 						editor.dom.setAttrib( node, 'data-cffp', window.encodeURIComponent( s ) );
 					}

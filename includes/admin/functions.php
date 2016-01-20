@@ -98,8 +98,9 @@ function cfp_get_post_types(){
  * Return template absolute path
  * @param string $part
  */
-function cfp_template_abs_path( $part ){
-    return CFP_PATH . '/views/' . $part . '.template.php';    
+function cfp_template_abs_path( $part, $template = 'template' ){
+    $suffix = preg_replace( '|([^a-z\-\_])|' , '', $template);
+	return CFP_PATH . '/views/' . $part . '.' . $suffix . '.php';    
 }
 
 /**
@@ -168,4 +169,14 @@ function cfp_dropdown( $args = array() ){
     }
 
     return $output;
+}
+
+function cfp_plugin_url( $path = '' ){
+    $url = 'http://www.codeflavors.com/';
+    $campaign = array(
+        'utm_source' 	=> 'plugin',
+        'utm_medium' 	=> 'doc_link',
+        'utm_campaign' 	=> 'codeflavors-featured-post'
+    );
+    return add_query_arg( $campaign, $url . trailingslashit( $path ) );
 }

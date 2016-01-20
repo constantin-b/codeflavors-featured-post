@@ -3,7 +3,7 @@
 Plugin Name: CodeFlavors Featured Post
 Plugin URI: 
 Description: Feature any post with custom templates on any of your pages by using shortcodes
-Version: 1.0.2
+Version: 1.0
 Author: CodeFlavors
 Author URI: http://www.codeflavors.com
 Domain Path: /languages
@@ -17,7 +17,7 @@ if( !defined( 'ABSPATH' ) ){
 
 define( 'CFP_PATH'		, plugin_dir_path(__FILE__) );
 define( 'CFP_URL'		, plugin_dir_url(__FILE__) );
-define( 'CFP_VERSION'	, '1.0.2');
+define( 'CFP_VERSION'	, '1.0');
 
 // plugin functions
 require_once CFP_PATH . 'includes/functions.php';
@@ -85,8 +85,19 @@ class CFP_Plugin{
 	 * Performs any maintenance actions needed to be done on activation.
 	 */
 	static function install(){
+	    // set a transient on plugin activation to allow it to redirect user to about page and get more details about the plugin
+	    self::activate_about_page();
+	}
 	
-	}	
+	/**
+	 * On activation it will set up a transient that flags the plugin
+	 * it was just activated and will redirect user to about plugin page.
+	 *
+	 * @return void
+	 */
+	static function activate_about_page(){
+	    set_transient( 'cfp_about_page_activated' , time(), 30 );
+	}
 }
 
 CFP_Plugin::start();

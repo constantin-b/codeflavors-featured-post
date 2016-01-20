@@ -58,14 +58,14 @@ function cfp_get_uri( $rel_path = '' ){
 function cfp_register_template_default( $templates ){
     $templates['default'] = array(
         'output_callback' => 'cfp_output_template_default',
-        'name'            => __( 'Fancy', 'cfp' )
+        'name'            => __( 'Default template', 'cfp' )
     );
     
     // give template a unique key
     $templates['fancy'] = array(
         // register a callback function that will be called when a featured post is displayed
         'output_callback'   => 'cfp_output_template_fancy',
-        'name'              => __( 'Default template', 'cfp' )
+        'name'              => __( 'Fancy', 'cfp' )
     );
     
     return $templates;
@@ -155,7 +155,6 @@ function cfp_template_fancy_styles(){
         	padding:.5em 2em;
         	text-align:center;
         	color:#FFF;
-        	text-transform:uppercase;
         	background-color:rgba(0,0,0,0.5);
         } 
         .codeflavors-featured-post.theme-fancy.no-image .cf-overlay .cf-inside{
@@ -170,6 +169,7 @@ function cfp_template_fancy_styles(){
                 .codeflavors-featured-post.theme-fancy .cf-overlay .cf-inside h2 a{
 	               text-decoration:none;
                    color:#FFF; 
+                   border:none;
                 }
             .codeflavors-featured-post.theme-fancy .cf-overlay .cf-inside p{
                 margin:0px;
@@ -226,7 +226,7 @@ function cfp_output_template_default(  $post, $terms, $image, $image_url  ){
     $date = get_the_date( '', $post );
     
     $author_name = get_the_author_meta( 'display_name', $post->author );
-    $author_avatar = get_avatar( $post->author, 50 );
+    $author_avatar = get_avatar( $post->post_author, 50 );
     
     $html = <<<HTML
 <div class="{$class}">

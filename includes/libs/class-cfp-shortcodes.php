@@ -87,12 +87,14 @@ final class CFP_Shortcodes{
     public function featured_post( $atts = array() ){
         // get shortcode details
         $data = $this->get_atts( 'codeflavors_featured_post' );
+        
         // merge user attributes with defaults
-        $atts = extract( shortcode_atts(
+        extract( shortcode_atts(
             $data,
-            $atts
+            $atts,
+            'codeflavors_featured_post'
         ), EXTR_SKIP );
-    
+        
         // set a default for the currently extracted post
         $posts = false;
     
@@ -103,12 +105,17 @@ final class CFP_Shortcodes{
                 $posts = array( $post );
             }
         }else{
+            $post_num = absint( $post_num );
+            if( $post_num < 1 ){
+                return $this->error( __( 'Posts number must be greater than 0. No featured posts displayed.', 'cfp' ) );
+            }
+            
             // the following options are: get the latest post type OR get the latest post type from category
             $args = array(
                 'posts_per_page'      => $post_num,
-                'offset'              => $offset,
+                'offset'              => absint( $offset ),
                 'suppress_filters'    => false,
-                'post_status'         => 'publish',
+                'post_status'         => ( $post_type == 'attachment' ? 'inherit' : 'publish' ),
                 'orderby'             => 'post_date',
                 'order'               => 'DESC',
                 'post_type'           => ( $post_type ? $post_type : 'post' )
@@ -127,7 +134,7 @@ final class CFP_Shortcodes{
         
         if( !$posts || is_wp_error( $posts ) ){
             // posts not found, maybe show an error?
-            return;
+            return $this->error( __( 'There were no posts matching your criteria. Please review the shortcode or widget attributes.', 'cfp' ) );
         }
     
         // the output
@@ -141,7 +148,7 @@ final class CFP_Shortcodes{
             // get post featured image
             $image = false;
             $image_url = false;
-            $post_thumbnail_id = get_post_thumbnail_id( $post->ID );
+            $post_thumbnail_id = 'attachment' == $post->post_type ? $post->ID : get_post_thumbnail_id( $post->ID );
             if( $post_thumbnail_id ){
                 $image = wp_get_attachment_image( $post_thumbnail_id, 'full' );
                 $image_url = wp_get_attachment_image_url( $post_thumbnail_id, 'full' );
@@ -150,7 +157,7 @@ final class CFP_Shortcodes{
             if( array_key_exists(  $template, $this->templates ) ){
                 $output .= call_user_func( $this->templates[ $template ]['output_callback'], $post, $terms, $image, $image_url );
             }else{
-                // template not found, maybe show an error?
+                return $this->error( sprintf( __( "The template %s couldn't be found.", 'cfp' ), '<strong>"' . $template . '"</strong>' ) );
             }
         }
     
@@ -179,6 +186,12 @@ final class CFP_Shortcodes{
      */
     public function get_templates(){
         return $this->templates;
+    }
+    
+    private function error( $err ){
+        if( current_user_can( 'edit_posts' ) ){
+            return '<div class="cf-query-error error"><strong style="color:red;">' . __('CodeFlavors Featured Post error', 'cfp') . ': </strong>' . $err . '</div>';    
+        }
     }
 }
 

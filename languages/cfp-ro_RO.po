@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: CodeFlavors Featured Post\n"
-"POT-Creation-Date: 2016-01-15 10:53+0200\n"
-"PO-Revision-Date: 2016-01-15 11:20+0200\n"
+"POT-Creation-Date: 2016-01-20 11:51+0200\n"
+"PO-Revision-Date: 2016-01-20 11:52+0200\n"
 "Last-Translator: Constantin Boiangiu <constantin.b@gmail.com>\n"
 "Language-Team: \n"
 "Language: ro_RO\n"
@@ -67,24 +67,33 @@ msgstr "Închide"
 msgid "No taxonomy"
 msgstr "Fără taxonomie"
 
-#: ../includes/admin/functions.php:132
+#: ../includes/admin/functions.php:133
 msgid "No options"
 msgstr "Fără opțiuni"
 
-#: ../includes/admin/functions.php:133
+#: ../includes/admin/functions.php:134
 msgid "Choose"
 msgstr "Alegeți"
 
-#: ../includes/admin/libs/class-cfp-admin.php:46
+#: ../includes/admin/libs/class-cfp-admin.php:114
 #: ../includes/compatibility.php:19
 #: ../includes/libs/class-cfp-featured-post-widget.php:32
-#: ../views/plugin_options.template.php:2
+#: ../views/about.page.php:8 ../views/plugin_options.template.php:2
 msgid "CodeFlavors Featured Post"
 msgstr "Articol Reprezentativ - CodeFlavors"
 
-#: ../includes/admin/libs/class-cfp-admin.php:47
+#: ../includes/admin/libs/class-cfp-admin.php:115
 msgid "Featured Post by CodeFlavors"
 msgstr "Articol reprezentativ creat de CodeFlavors"
+
+#: ../includes/admin/libs/class-cfp-admin.php:123
+#: ../includes/admin/libs/class-cfp-admin.php:124
+msgid "About CodeFlavors Featured Post"
+msgstr "Despre plugin"
+
+#: ../includes/admin/libs/class-cfp-admin.php:174
+msgid "Options"
+msgstr "Opțiuni"
 
 #: ../includes/compatibility.php:20
 msgid "Feature any post type."
@@ -138,12 +147,12 @@ msgstr ""
 "reprezentativ."
 
 #: ../includes/functions.php:61
-msgid "Fancy"
-msgstr "Elegant"
-
-#: ../includes/functions.php:68
 msgid "Default template"
 msgstr "Șablon de bază"
+
+#: ../includes/functions.php:68
+msgid "Fancy"
+msgstr "Elegant"
 
 #: ../includes/functions.php:223
 #, php-format
@@ -218,6 +227,131 @@ msgstr ""
 msgid "The featured post template to use when displaying a post."
 msgstr "Șablonul ce va fi folosit pentru a afișa articolul reprezentativ."
 
-#: ../views/plugin_options.template.php:13
+#: ../includes/libs/class-cfp-shortcodes.php:110
+msgid "Posts number must be greater than 0. No featured posts displayed."
+msgstr ""
+"Numărul de articole trebuie sa fie mai mare decât zero. Nu se afișează nici "
+"un articol."
+
+#: ../includes/libs/class-cfp-shortcodes.php:137
+msgid ""
+"There were no posts matching your criteria. Please review the shortcode or "
+"widget attributes."
+msgstr ""
+"Nu există articole care să corespundă criteriilor dvs. Vă rugăm să "
+"modificați parametrii."
+
+#: ../includes/libs/class-cfp-shortcodes.php:160
+#, php-format
+msgid "The template %s couldn't be found."
+msgstr "Șablonul %s nu a putut fi găsit."
+
+#: ../includes/libs/class-cfp-shortcodes.php:193
+msgid "CodeFlavors Featured Post error"
+msgstr "Eroare"
+
+#: ../views/about.page.php:9
+msgid ""
+"Thank you for using CodeFlavors Featured Post, the plugin that gives you the "
+"easiest way to showcase featured posts."
+msgstr ""
+"Vă mulțumim că ați ales să utilizați acest plugin, singurul care vă oferă "
+"cea mai simplă modalitate de a afișa articole reprezentative in paginile dvs."
+
+#: ../views/about.page.php:10
+#, php-format
+msgid "Version %s"
+msgstr "Versiunea %s"
+
+#: ../views/about.page.php:12 ../views/about.page.php:42
+msgid "Plugin options"
+msgstr "Opțiuni modul"
+
+#: ../views/about.page.php:13
+msgid "Docs & Tuts"
+msgstr "Documentație și tutoriale"
+
+#: ../views/about.page.php:17
+msgid "Features"
+msgstr "Caracteristici"
+
+#: ../views/about.page.php:21
+msgid "Feature any post type"
+msgstr "Afișați orice tip de articol"
+
+#: ../views/about.page.php:22
+msgid "You can choose to feature any publicly registered post type available."
+msgstr ""
+"Puteți alege să afișați orice tip de articol înregistrat public pe site-ul "
+"dvs."
+
+#: ../views/about.page.php:24
+msgid "Create your own templates"
+msgstr "Creați propriile șabloane"
+
+#: ../views/about.page.php:25
+msgid ""
+"By default, the plugin comes with only two templates: Default and Fancy. If "
+"none of the two themes apply to your project, you can easily create your own "
+"theme that you can use to feature posts on your website."
+msgstr ""
+"Modulul vă oferă posibilitatea de a alege între cele doua șabloane de bază: "
+"Elegant și De bază. Dacă nici una dintre cele două șabloane nu vă satisfac "
+"exigențele, puteți crea cu ușurință propriul dvs. șablon pe care îl puteți "
+"apoi folosi pentru a afișa articole reprezentative pe site-ul dvs."
+
+#: ../views/about.page.php:27
+msgid "Highly compatible"
+msgstr "Compatibilitate"
+
+#: ../views/about.page.php:28
+msgid ""
+"The plugin is compatible out-of-the-box with Visual Composer plugin and also "
+"with any WordPress theme."
+msgstr ""
+"Modulul este compatibil cu Visual Composer cât și cu oricare dintre temele "
+"WordPress disponibile."
+
+#: ../views/about.page.php:32
+msgid "Shortcode and widget"
+msgstr "Shortcode si Piese"
+
+#: ../views/about.page.php:33
+msgid ""
+"You can feature posts by both using the shortcode that the plugin implements "
+"or by using the widget added by the plugin."
+msgstr ""
+"Articolele reprezentative pot fi afișate în site-ul dvs. fie utilizând "
+"shortcode-ul pus la dispoziție, fie folosind piesa implementată de către "
+"modul și care poate fi folosită în ecranul de Personalizare a temei dvs. "
+"WordPress."
+
+#: ../views/about.page.php:35
+msgid "Plenty of options"
+msgstr "Opțiuni multiple"
+
+#: ../views/about.page.php:36
+msgid ""
+"Featured posts can be selected by ID or as the latest posts from any given "
+"category or post type. You can even skip some posts, it's all up to you!"
+msgstr ""
+"Articolele reprezentative pot fi selectate fie după ID-ul lor sau ca "
+"ultimele articole adăugate din orice tip de articol sau categorie. De "
+"asemenea, în momentul selectării puteți opta ca un număr de articole să fie "
+"sărite. "
+
+#: ../views/plugin_options.template.php:5
+msgid ""
+"Below you can find a brief description of the shortcode implemented by the "
+"plugin."
+msgstr ""
+
+#: ../views/plugin_options.template.php:6
+#, php-format
+msgid ""
+"For more information about this plugin, please see the %sdocumentation%s."
+msgstr ""
+
+#: ../views/plugin_options.template.php:19
 msgid "default"
 msgstr "Șablon de bază"
